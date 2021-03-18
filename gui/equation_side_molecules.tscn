@@ -1,0 +1,11 @@
+[gd_scene format=2]
+
+[node name="equation_side_molecules" type="HBoxContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+hint_tooltip = "Ce côté de l'équation est celui des réactifs, ce sont les molécules qui vont disparaître pendant la réaction chimique."
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}

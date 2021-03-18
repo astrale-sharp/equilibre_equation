@@ -1,0 +1,109 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://gui/molecule/atom_gui.gd" type="Script" id=3]
+
+[node name="atom_gui" type="HBoxContainer"]
+margin_left = 346.0
+margin_top = 5.0
+margin_right = 1026.0
+margin_bottom = 97.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="name" type="Label" parent="."]
+margin_top = 39.0
+margin_bottom = 53.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 4.0
+margin_right = 32.0
+margin_bottom = 92.0
+size_flags_vertical = 4
+
+[node name="charge" type="HBoxContainer" parent="VBoxContainer"]
+margin_right = 28.0
+margin_bottom = 44.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="VBoxContainer/charge"]
+margin_right = 4.0
+margin_bottom = 44.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+text = " "
+align = 1
+valign = 1
+
+[node name="buttons" type="VBoxContainer" parent="VBoxContainer/charge"]
+margin_left = 8.0
+margin_right = 28.0
+margin_bottom = 44.0
+
+[node name="plus" type="Button" parent="VBoxContainer/charge/buttons"]
+margin_right = 20.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 20, 20 )
+hint_tooltip = "permet de changer la charge."
+size_flags_horizontal = 3
+size_flags_vertical = 7
+text = "+"
+
+[node name="minus" type="Button" parent="VBoxContainer/charge/buttons"]
+margin_top = 24.0
+margin_right = 20.0
+margin_bottom = 44.0
+rect_min_size = Vector2( 20, 20 )
+hint_tooltip = "permet de changer la charge."
+size_flags_horizontal = 3
+size_flags_vertical = 7
+text = "-"
+
+[node name="stoechiometrie" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 48.0
+margin_right = 28.0
+margin_bottom = 92.0
+size_flags_horizontal = 9
+size_flags_vertical = 12
+alignment = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/stoechiometrie"]
+margin_right = 4.0
+margin_bottom = 44.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+align = 1
+valign = 1
+
+[node name="buttons" type="VBoxContainer" parent="VBoxContainer/stoechiometrie"]
+margin_left = 8.0
+margin_right = 28.0
+margin_bottom = 44.0
+hint_tooltip = "Permet de changer la nature de la molécule."
+
+[node name="plus" type="Button" parent="VBoxContainer/stoechiometrie/buttons"]
+margin_right = 20.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 20, 20 )
+hint_tooltip = "Permet de changer la nature de la molécule."
+size_flags_horizontal = 3
+size_flags_vertical = 7
+text = "+"
+
+[node name="minus" type="Button" parent="VBoxContainer/stoechiometrie/buttons"]
+margin_top = 24.0
+margin_right = 20.0
+margin_bottom = 44.0
+rect_min_size = Vector2( 20, 20 )
+hint_tooltip = "Permet de changer la nature de la molécule."
+size_flags_horizontal = 3
+size_flags_vertical = 7
+text = "-"
