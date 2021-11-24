@@ -1,4 +1,4 @@
-extends Panel
+extends PanelContainer
 
 
 onready var atom_selector := preload("res://gui/atom_selector/atom_selector.tscn")

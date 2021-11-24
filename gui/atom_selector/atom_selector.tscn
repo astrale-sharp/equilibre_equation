@@ -5,11 +5,15 @@
 [ext_resource path="res://theme.tres" type="Theme" id=3]
 
 [node name="atom_selector" type="PopupPanel"]
+visible = true
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_right = -465.0
-margin_bottom = -241.0
+margin_right = -424.0
+margin_bottom = -200.0
+rect_min_size = Vector2( 600, 400 )
 hint_tooltip = "Clique sur les atomes de ton choix pour les ajouter dans la molécule que tu crées puis clique sur ok."
+size_flags_horizontal = 0
+size_flags_vertical = 0
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -41,6 +45,7 @@ margin_right = 506.0
 margin_bottom = 358.0
 theme = ExtResource( 3 )
 align = 1
+
 [connection signal="pressed" from="Node2D/OkButton" to="." method="_on_OkButton_pressed"]
 
 [editable path="tableau_periodique_gui"]
