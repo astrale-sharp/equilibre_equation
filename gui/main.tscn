@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://theme.tres" type="Theme" id=1]
+[ext_resource path="res://scene/new_theme.tres" type="Theme" id=1]
 [ext_resource path="res://gui/equation_side_buttons.tscn" type="PackedScene" id=2]
 [ext_resource path="res://fonts/Caladea-Bold.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://gui/main.gd" type="Script" id=4]
@@ -18,6 +18,15 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 theme = ExtResource( 1 )
 script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="."]
+margin_left = 6.0
+margin_top = 4.0
+margin_right = 1018.0
+margin_bottom = 596.0
 
 [node name="screen" type="VBoxContainer" parent="."]
 margin_left = 6.0
@@ -86,13 +95,13 @@ margin_bottom = 96.0
 
 [node name="rajouter_molecule" parent="screen/interactif/left_side/VBoxContainer" index="0"]
 margin_right = 504.0
-margin_bottom = 27.0
+margin_bottom = 28.0
 hint_tooltip = "Clique pour rajouter une molécule à gauche de l'équation."
 
 [node name="expliquer" parent="screen/interactif/left_side/VBoxContainer" index="1"]
-margin_top = 31.0
+margin_top = 32.0
 margin_right = 504.0
-margin_bottom = 58.0
+margin_bottom = 60.0
 hint_tooltip = "Ce bouton permet d'expliquer le côté des réactifs."
 
 [node name="right_side" parent="screen/interactif" instance=ExtResource( 2 )]
@@ -102,13 +111,13 @@ margin_bottom = 96.0
 
 [node name="rajouter_molecule" parent="screen/interactif/right_side/VBoxContainer" index="0"]
 margin_right = 504.0
-margin_bottom = 27.0
+margin_bottom = 28.0
 hint_tooltip = "Clique pour rajouter une molécule à droite de l'équation."
 
 [node name="expliquer" parent="screen/interactif/right_side/VBoxContainer" index="1"]
-margin_top = 31.0
+margin_top = 32.0
 margin_right = 504.0
-margin_bottom = 58.0
+margin_bottom = 60.0
 hint_tooltip = "Ce bouton permet d'expliquer le côté des produits."
 
 [node name="resultats" parent="screen" instance=ExtResource( 8 )]

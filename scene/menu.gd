@@ -1,17 +1,12 @@
 extends PanelContainer
 
-
-# Declare member variables here. Examples:
-# var a: int = 2
-# var b: String = "text"
-
-
-# Called when the node enters the scene tree for the first time.
+onready var menu_button = $VBoxContainer/buttons/MenuButton
 func _ready() -> void:
-	$VBoxContainer/buttons/MenuButton.get_popup().connect("id_pressed",self,"on_id_pressed")
+	menu_button.get_popup().connect("id_pressed",self,"on_id_pressed")
 
 
 func on_id_pressed(id):
+	print("5")
 	var _path = ""
 	match id:
 		0:_path = "res://scene/combustion_carbone.tscn"

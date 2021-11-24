@@ -29,7 +29,7 @@ func ui_rajouter_une_molecule(left : bool):
 	var selector = atom_selector.instance()
 	selector.connect("molecule",self,"atoms_received",[left])
 	add_child(selector)
-	selector.popup_centered()
+	selector.popup_centered(Vector2.ONE * 500)
 	
 
 func rajouter_une_molecule(molecule : main.Molecule,left=true):
@@ -195,7 +195,7 @@ func _on_expliquer_equation_side(left=true):
 				if left else\
 		  "Les molécules de ce côté vont apparaître, elles sont construites à partir des atomes des réactifs." 
 	label.bbcode_text = t
-	p.popup_centered()
+	p.popup_centered(Vector2.ONE * 500)
 	
 func retour_menu():
 	get_tree().change_scene("res://scene/menu.tscn")

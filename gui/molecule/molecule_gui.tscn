@@ -81,4 +81,5 @@ text = "expliquer"
 [node name="Popup" parent="." instance=ExtResource( 3 )]
 margin_right = 1024.0
 margin_bottom = 600.0
+
 [connection signal="value_changed" from="in_panel_molecule/molecule/Stoechiometrie" to="." method="_on_Stoechiometrie_value_changed"]

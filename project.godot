@@ -32,19 +32,4 @@ _global_script_class_icons={
 
 [application]
 
-config/name="equilibre_des_equations"
 run/main_scene="res://scene/menu.tscn"
-config/icon="res://icon.png"
-
-[display]
-
-window/size/fullscreen=true
-
-[editor_plugins]
-
-enabled=PoolStringArray( "gut" )
-
-[rendering]
-
-environment/default_clear_color=Color( 0.14902, 0.172549, 0.231373, 1 )
-environment/default_environment="res://default_env.tres"
