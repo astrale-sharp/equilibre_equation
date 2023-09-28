@@ -72,7 +72,7 @@ func montrer_les_resultats():
 				for k in other_res[0]:
 					conclusion += k
 					conclusion += ", "
-					conclusion = conclusion.rstrip(", ")
+				conclusion = conclusion.rstrip(", ")
 				conclusion += " "
 				conclusion += "sont présents à gauche de l'équation mais pas à droite.\n"
 			if not other_res[1].empty():
