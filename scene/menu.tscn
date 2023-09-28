@@ -65,14 +65,14 @@ size_flags_vertical = 3
 bbcode_enabled = true
 bbcode_text = "
 
-[center]Cette simulation permet de s'entraîner pour le Chapitre 4: Modéliser les transformations chimiques.
+[center]Ce programme permet de s'entraîner pour modéliser les transformations chimiques.
 
-Elle contient plusieurs exemples qui illustrent chaque point du chapitre et un outil pour faire les équations soi même. [/center]"
+Elle contient plusieurs exemples qui illustrent le concept et un outil pour faire les équations soi même. [/center]"
 text = "
 
-Cette simulation permet de s'entraîner pour le Chapitre 4: Modéliser les transformations chimiques.
+Ce programme permet de s'entraîner pour modéliser les transformations chimiques.
 
-Elle contient plusieurs exemples qui illustrent chaque point du chapitre et un outil pour faire les équations soi même. "
+Elle contient plusieurs exemples qui illustrent le concept et un outil pour faire les équations soi même. "
 scroll_active = false
 
 [node name="buttons" type="HBoxContainer" parent="VBoxContainer"]
