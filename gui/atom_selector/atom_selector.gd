@@ -6,7 +6,7 @@ var atoms = []
 signal molecule(data)
 
 func _ready() -> void:
-	$tableau_periodique_gui.connect("atom_choice",self,"data_received")
+	find_node("tableau_periodique_gui").connect("atom_choice",self,"data_received")
 
 func data_received(data):
 	var molec_part := main.Atom_as_MolecPart.new()
@@ -16,8 +16,8 @@ func data_received(data):
 			return
 
 	atoms.append(molec_part)
-	$Node2D/Label.text += " "
-	$Node2D/Label.text += molec_part.atom.Symbol
+	$"VBoxContainer/Selection Label".text += " "
+	$"VBoxContainer/Selection Label".text += molec_part.atom.Symbol
 	atoms.sort_custom(self,"sort_atoms")
 
 func _on_OkButton_pressed() -> void:

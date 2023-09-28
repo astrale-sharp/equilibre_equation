@@ -10,39 +10,53 @@ margin_right = -424.0
 margin_bottom = -200.0
 rect_min_size = Vector2( 600, 400 )
 hint_tooltip = "Clique sur les atomes de ton choix pour les ajouter dans la molécule que tu crées puis clique sur ok."
-size_flags_horizontal = 0
-size_flags_vertical = 0
+size_flags_horizontal = 12
+size_flags_vertical = 12
 script = ExtResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="tableau_periodique_gui" parent="." instance=ExtResource( 1 )]
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 4.0
+margin_top = 4.0
+margin_right = 596.0
+margin_bottom = 396.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 
-[node name="bound" parent="tableau_periodique_gui" index="1"]
-position = Vector2( 571.325, 299.61 )
+[node name="tableau_periodique_gui" parent="VBoxContainer" instance=ExtResource( 1 )]
+margin_right = 40.0
+margin_bottom = 16.0
+size_flags_stretch_ratio = 3.0
 
-[node name="Node2D" type="Node2D" parent="."]
+[node name="Selection Label" type="Label" parent="VBoxContainer"]
+margin_right = 40.0
+margin_bottom = 14.0
+text = "Atomes sélectionné :"
 
-[node name="OkButton" type="Button" parent="Node2D"]
-margin_left = 509.407
-margin_top = 319.839
-margin_right = 557.407
-margin_bottom = 355.839
-size_flags_horizontal = 0
-size_flags_vertical = 0
-text = "Ok"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 20.0
+margin_right = 40.0
+margin_bottom = 40.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 
-[node name="Label" type="Label" parent="Node2D"]
-margin_left = 1.0
-margin_top = 322.0
-margin_right = 506.0
-margin_bottom = 358.0
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer"]
+margin_right = 6.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 11
+size_flags_stretch_ratio = 3.0
+text = "sélectionne les atomes en cliquant dessus"
 align = 1
+valign = 1
 
-[connection signal="pressed" from="Node2D/OkButton" to="." method="_on_OkButton_pressed"]
+[node name="OkButton" type="Button" parent="VBoxContainer/HBoxContainer"]
+margin_left = 10.0
+margin_right = 40.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 11
+text = "Ok"
 
-[editable path="tableau_periodique_gui"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/OkButton" to="." method="_on_OkButton_pressed"]
+
+[editable path="VBoxContainer/tableau_periodique_gui"]
